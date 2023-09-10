@@ -7,7 +7,7 @@ app = Flask(__name__)
 def get_info():
     # query parameters
     slack_name = request.args.get('slack_name')
-    track = request.args.get('track', 'backend')
+    track = request.args.get('track')
 
     # day of the week
     current_day = datetime.datetime.now().strftime('%A')
